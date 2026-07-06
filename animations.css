@@ -1,0 +1,363 @@
+/* Hero Fade-In */
+.hero-content {
+    animation: slideLeft 1s ease forwards;
+}
+
+.hero-image {
+    animation: slideRight 1.2s ease forwards;
+}
+
+.hero-image img {
+    animation: floating 5s ease-in-out infinite;
+}
+
+/* Logo Animation */
+.logo {
+    animation: fadeDown 1s ease;
+}
+
+/* Navigation Links */
+.nav-links li {
+    animation: fadeDown .8s ease forwards;
+}
+
+/* Button Hover Glow */
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 60%;
+    height: 100%;
+    background: rgba(255,255,255,.35);
+    transform: skewX(-25deg);
+    transition: .7s;
+}
+
+.btn:hover::before {
+    left: 150%;
+}
+
+/* Cards */
+
+.card {
+    transition:
+        transform .4s,
+        box-shadow .4s,
+        background .4s;
+}
+
+.card:hover {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0,0,0,.4);
+    background: rgba(255,255,255,.12);
+}
+
+/* Statistics */
+
+.stat {
+    transition: .4s;
+}
+
+.stat:hover {
+    transform: translateY(-10px);
+}
+
+/* Contact Box */
+
+.contact-info {
+    transition: .4s;
+}
+
+.contact-info:hover {
+    transform: scale(1.02);
+}
+
+/* Timeline */
+
+.step {
+    transition: .35s;
+}
+
+.step:hover {
+    transform: translateX(12px);
+}
+
+/* Floating Effect */
+
+@keyframes floating {
+
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-18px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+
+}
+
+/* Slide Left */
+
+@keyframes slideLeft {
+
+    from {
+
+        opacity:0;
+        transform:translateX(-80px);
+
+    }
+
+    to {
+
+        opacity:1;
+        transform:translateX(0);
+
+    }
+
+}
+
+/* Slide Right */
+
+@keyframes slideRight {
+
+    from {
+
+        opacity:0;
+        transform:translateX(80px);
+
+    }
+
+    to {
+
+        opacity:1;
+        transform:translateX(0);
+
+    }
+
+}
+
+/* Fade Down */
+
+@keyframes fadeDown {
+
+    from {
+
+        opacity:0;
+        transform:translateY(-40px);
+
+    }
+
+    to {
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/* Fade Up */
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity:0;
+        transform:translateY(50px);
+
+    }
+
+    to {
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/* Pulse */
+
+@keyframes pulse {
+
+    0% {
+
+        transform:scale(1);
+
+    }
+
+    50% {
+
+        transform:scale(1.06);
+
+    }
+
+    100% {
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* Gradient Animation */
+
+@keyframes gradientMove {
+
+    0% {
+
+        background-position:0% 50%;
+
+    }
+
+    50% {
+
+        background-position:100% 50%;
+
+    }
+
+    100% {
+
+        background-position:0% 50%;
+
+    }
+
+}
+
+/* Hero Title */
+
+.hero-content h1 {
+
+    background:linear-gradient(
+        90deg,
+        #ffffff,
+        #06B6D4,
+        #4F46E5,
+        #ffffff
+    );
+
+    background-size:300%;
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+
+    animation:
+        gradientMove 8s linear infinite;
+
+}
+
+/* CTA */
+
+.cta h2 {
+
+    animation:pulse 3s infinite;
+
+}
+
+/* Reveal Animation */
+
+.reveal {
+
+    opacity:0;
+
+    transform:translateY(70px);
+
+    transition:all .9s ease;
+
+}
+
+.reveal.active {
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/* Footer */
+
+footer {
+
+    animation:fadeUp 1.2s ease;
+
+}
+
+/* Back To Top */
+
+#topBtn {
+
+    transition:
+        transform .3s,
+        background .3s,
+        opacity .3s;
+
+}
+
+#topBtn:hover {
+
+    transform:translateY(-10px) rotate(360deg);
+
+}
+
+/* Inputs */
+
+input,
+textarea {
+
+    transition:
+        border .3s,
+        transform .3s,
+        box-shadow .3s;
+
+}
+
+input:focus,
+textarea:focus {
+
+    transform:scale(1.02);
+
+    box-shadow:0 0 15px rgba(6,182,212,.35);
+
+}
+
+/* Hero Image Glow */
+
+.hero-image img {
+
+    box-shadow:
+    0 0 40px rgba(79,70,229,.25);
+
+}
+
+/* Hover Lift */
+
+img {
+
+    transition:.4s;
+
+}
+
+img:hover {
+
+    transform:scale(1.02);
+
+}
+
+/* Smooth Appearance */
+
+section {
+
+    animation:fadeUp 1s ease;
+
+}
